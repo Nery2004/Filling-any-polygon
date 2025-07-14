@@ -17,7 +17,6 @@ fn main() {
         poligono2(&mut d);
         poligono3(&mut d);
         poligono4(&mut d);
-        poligono5(&mut d);
     }
 }
 fn poligono1(d: &mut RaylibDrawHandle) {
@@ -48,6 +47,7 @@ fn poligono2(d: &mut RaylibDrawHandle) {
         Vector2::new(339.0, 251.0),
         Vector2::new(374.0, 302.0),
     ];
+    d.draw_triangle(polygon[0], polygon[1], polygon[2], Color::BLUE);
     
     for i in 0..polygon.len() {
         let next = (i + 1) % polygon.len();
@@ -61,13 +61,15 @@ fn poligono3(d: &mut RaylibDrawHandle) {
         Vector2::new(436.0, 249.0),
     ];
     
+    d.draw_triangle(polygon[0], polygon[1], polygon[2], Color::RED);
+
     for i in 0..polygon.len() {
         let next = (i + 1) % polygon.len();
         d.draw_line_ex(polygon[i], polygon[next], 2.0, Color::WHITE);
     }
 }
 fn poligono4(d: &mut RaylibDrawHandle) {
-    let polygon = vec![
+    let exterior = vec![
         Vector2::new(413.0, 177.0),
         Vector2::new(448.0, 159.0),
         Vector2::new(502.0, 88.0),
@@ -88,27 +90,26 @@ fn poligono4(d: &mut RaylibDrawHandle) {
         Vector2::new(466.0, 180.0),
     ];
 
-    // Relleno (triangulación simple tipo abanico)
-    for i in 1..(polygon.len() - 1) {
-        d.draw_triangle(polygon[0], polygon[i], polygon[i + 1], Color::GREEN);
-    }
-
-    // Borde
-    for i in 0..polygon.len() {
-        let next = (i + 1) % polygon.len();
-        d.draw_line_ex(polygon[i], polygon[next], 2.0, Color::WHITE);
-    }
-}
-fn poligono5(d: &mut RaylibDrawHandle) {
-    let polygon = vec![
+    let agujero = vec![
         Vector2::new(682.0, 175.0),
         Vector2::new(708.0, 120.0),
         Vector2::new(735.0, 148.0),
         Vector2::new(739.0, 170.0),
     ];
-    
-    for i in 0..polygon.len() {
-        let next = (i + 1) % polygon.len();
-        d.draw_line_ex(polygon[i], polygon[next], 2.0, Color::WHITE);
+    for i in 1..(exterior.len() - 1) {
+        d.draw_triangle(exterior[0], exterior[i], exterior[i + 1], Color::GREEN);
+    }
+
+    for i in 1..(agujero.len() - 1) {
+        d.draw_triangle(agujero[0], agujero[i], agujero[i + 1], Color::BLACK);
+    }
+    for i in 0..exterior.len() {
+        let next = (i + 1) % exterior.len();
+        d.draw_line_ex(exterior[i], exterior[next], 2.0, Color::WHITE);
+    }
+
+    for i in 0..agujero.len() {
+        let next = (i + 1) % agujero.len();
+        d.draw_line_ex(agujero[i], agujero[next], 2.0, Color::WHITE);
     }
 }
