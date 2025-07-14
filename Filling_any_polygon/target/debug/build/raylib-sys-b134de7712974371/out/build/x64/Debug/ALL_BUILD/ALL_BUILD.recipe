@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>C:\Users\Neryyy\Documents\Graficas\Filling-any-polygon\Filling_any_polygon\target\debug\build\raylib-sys-b134de7712974371\out\build\x64\Debug\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\Neryyy\Documents\Graficas\Filling-any-polygon\Filling_any_polygon\target\debug\build\raylib-sys-b134de7712974371\out\build\x64\Debug\ALL_BUILD</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

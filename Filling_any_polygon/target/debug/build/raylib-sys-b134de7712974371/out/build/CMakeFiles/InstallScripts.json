@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/Neryyy/Documents/Graficas/Filling-any-polygon/Filling_any_polygon/target/debug/build/raylib-sys-b134de7712974371/out/build/cmake_install.cmake",
+		"C:/Users/Neryyy/Documents/Graficas/Filling-any-polygon/Filling_any_polygon/target/debug/build/raylib-sys-b134de7712974371/out/build/raylib/cmake_install.cmake",
+		"C:/Users/Neryyy/Documents/Graficas/Filling-any-polygon/Filling_any_polygon/target/debug/build/raylib-sys-b134de7712974371/out/build/raylib/external/glfw/cmake_install.cmake",
+		"C:/Users/Neryyy/Documents/Graficas/Filling-any-polygon/Filling_any_polygon/target/debug/build/raylib-sys-b134de7712974371/out/build/raylib/external/glfw/src/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

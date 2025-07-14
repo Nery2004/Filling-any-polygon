@@ -1,0 +1,13 @@
+prefix=C:/Users/Neryyy/Documents/Graficas/Filling-any-polygon/Filling_any_polygon/target/debug/build/raylib-sys-b134de7712974371/out
+exec_prefix=${prefix}
+includedir=C:/Users/Neryyy/Documents/Graficas/Filling-any-polygon/Filling_any_polygon/target/debug/build/raylib-sys-b134de7712974371/out/include
+libdir=C:/Users/Neryyy/Documents/Graficas/Filling-any-polygon/Filling_any_polygon/target/debug/build/raylib-sys-b134de7712974371/out/lib
+
+Name: GLFW
+Description: A multi-platform library for OpenGL, window and input
+Version: 3.4.0
+URL: https://www.glfw.org/
+Requires.private: 
+Libs: -L${libdir} -lglfw3
+Libs.private:  -lgdi32
+Cflags: -I${includedir}

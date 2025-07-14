@@ -1,0 +1,10 @@
+^C:\USERS\NERYYY\DOCUMENTS\GRAFICAS\FILLING-ANY-POLYGON\FILLING_ANY_POLYGON\TARGET\DEBUG\BUILD\RAYLIB-SYS-B134DE7712974371\OUT\BUILD\CMAKEFILES\7C3605198CA2D4DF2DC197F8712ADE5A\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

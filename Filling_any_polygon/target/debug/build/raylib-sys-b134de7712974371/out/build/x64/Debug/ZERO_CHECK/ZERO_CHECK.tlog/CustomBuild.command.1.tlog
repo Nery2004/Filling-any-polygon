@@ -1,0 +1,10 @@
+^C:\USERS\NERYYY\DOCUMENTS\GRAFICAS\FILLING-ANY-POLYGON\FILLING_ANY_POLYGON\TARGET\DEBUG\BUILD\RAYLIB-SYS-B134DE7712974371\OUT\BUILD\CMAKEFILES\7C3605198CA2D4DF2DC197F8712ADE5A\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Neryyy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/raylib-sys-5.5.1/raylib -BC:/Users/Neryyy/Documents/Graficas/Filling-any-polygon/Filling_any_polygon/target/debug/build/raylib-sys-b134de7712974371/out/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Neryyy/Documents/Graficas/Filling-any-polygon/Filling_any_polygon/target/debug/build/raylib-sys-b134de7712974371/out/build/raylib.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
