@@ -43,16 +43,10 @@ fn poligono1(d: &mut RaylibDrawHandle) {
 }
 fn poligono2(d: &mut RaylibDrawHandle) {
     let polygon = vec![
-        Vector2::new(165.0, 380.0),
-        Vector2::new(185.0, 360.0),
-        Vector2::new(180.0, 330.0),
-        Vector2::new(207.0, 345.0),
-        Vector2::new(233.0, 330.0),
-        Vector2::new(230.0, 360.0),
-        Vector2::new(250.0, 380.0),
-        Vector2::new(220.0, 385.0),
-        Vector2::new(205.0, 410.0),
-        Vector2::new(193.0, 383.0),
+        Vector2::new(321.0, 335.0),
+        Vector2::new(288.0, 286.0),
+        Vector2::new(339.0, 251.0),
+        Vector2::new(374.0, 302.0),
     ];
     
     for i in 0..polygon.len() {
@@ -62,16 +56,9 @@ fn poligono2(d: &mut RaylibDrawHandle) {
 }
 fn poligono3(d: &mut RaylibDrawHandle) {
     let polygon = vec![
-        Vector2::new(165.0, 380.0),
-        Vector2::new(185.0, 360.0),
-        Vector2::new(180.0, 330.0),
-        Vector2::new(207.0, 345.0),
-        Vector2::new(233.0, 330.0),
-        Vector2::new(230.0, 360.0),
-        Vector2::new(250.0, 380.0),
-        Vector2::new(220.0, 385.0),
-        Vector2::new(205.0, 410.0),
-        Vector2::new(193.0, 383.0),
+        Vector2::new(377.0, 249.0),
+        Vector2::new(411.0, 197.0),
+        Vector2::new(436.0, 249.0),
     ];
     
     for i in 0..polygon.len() {
