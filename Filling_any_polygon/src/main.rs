@@ -67,8 +67,10 @@ fn scanline_fill(d: &mut RaylibDrawHandle, polygon: &[Vector2], color: Color) {
 }
 
 fn main() {
-    let image_width =  800;
+    let mut saved = false;
+    let image_width = 800;
     let image_height = 800;
+
     let (mut rl, thread) = raylib::init()
         .size(image_width, image_height)
         .title("Polígonos")
@@ -77,13 +79,20 @@ fn main() {
     rl.set_target_fps(60);
 
     while !rl.window_should_close() {
-        let mut d = rl.begin_drawing(&thread);
-        d.clear_background(Color::BLACK);
+        {
+            let mut d = rl.begin_drawing(&thread);
+            d.clear_background(Color::BLACK);
 
-        poligono1(&mut d);
-        poligono2(&mut d);
-        poligono3(&mut d);
-        poligono4(&mut d);
+            poligono1(&mut d);
+            poligono2(&mut d);
+            poligono3(&mut d);
+            poligono4(&mut d);
+        } 
+
+        if !saved {
+            rl.take_screenshot(&thread, "out.png");
+            saved = true;
+        }
     }
 }
 
